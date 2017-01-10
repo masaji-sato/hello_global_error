@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello_reject.iml" filepath="$PROJECT_DIR$/.idea/modules/hello_reject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello_reject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello_reject_main.iml" group="hello_reject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello_reject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hello_reject_test.iml" group="hello_reject" />
+    </modules>
+  </component>
+</project>

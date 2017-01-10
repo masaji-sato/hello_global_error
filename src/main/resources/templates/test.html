@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<style>
+.fieldError {
+    background-color: darksalmon;
+}
+</style>
+<body>
+
+<p>エラーのthymeleafテスト</p>
+<p><a href="http://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#field-errors" target="_blank">8.1 Field errors</a></p>
+<p>pタグでだす</p>
+
+<h2>th:object</h2>
+<form method="post" action="/test" th:object="${a}">
+    <!-- グローバルエラー -->
+    <ul th:if="${#fields.hasErrors('global')}">
+        <li th:each="err : ${#fields.errors('global')}" th:text="${err}">Input is incorrect</li>
+    </ul>
+
+    <input type="text"
+           th:field="*{b.c.value}"
+           th:class="${#fields.hasErrors('b.c.value')}? fieldError" />
+
+    <div th:if="${#fields.hasErrors('b.c.value')}">
+        <p>pタグ内でエラーをリストアップ<br />※スタイルが当てづらい</p>
+        <p th:errors="*{b.c.value}">Incorrect date</p>
+    </div>
+
+    <input type="submit" value="click" />
+</form>
+
+</body>
+</html>
